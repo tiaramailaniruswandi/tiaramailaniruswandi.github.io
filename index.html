@@ -5,53 +5,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tugas Jaringan Komputer - Tiaramailaniruswandi</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1, h2 { color: #2c3e50; }
-        img { border-radius: 10px; border: 2px solid #ddd; }
-        a { color: #2980b9; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e1e8ed;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #4a6fa5;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #3498db;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px dashed #bdc3c7;
+        }
+        .identity p {
+            font-size: 1.1rem;
+            margin: 8px 0;
+            padding-left: 10px;
+        }
+        .photo-section, .router-section {
+            text-align: center;
+            margin: 25px 0;
+        }
+        img {
+            border-radius: 15px;
+            border: 5px solid #ecf0f1;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 100%;
+            height: auto;
+        }
+        .photo-section img {
+            width: 280px;
+        }
+        .router-section img {
+            width: 500px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        ul li:before {
+            content: "▸";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .pdf-links {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        .pdf-links a {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            padding: 12px 25px;
+            margin: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .pdf-links a:hover {
+            background: #3498db;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            border-top: 1px solid #ecf0f1;
+            padding-top: 20px;
+        }
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .router-section img {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Identitas Pembuat</h1>
-        <p><strong>NIM:</strong> 607012530004</p>
-        <p><strong>Nama:</strong> Tiaramailaniruswandi</p>
-        <p><strong>Kelas:</strong> D3 Sistem Informasi</p>
+        <header>
+            <h1>📚 Tugas Besar Jaringan Komputer</h1>
+            <p>Hosting Website & Pembahasan Perangkat Jaringan</p>
+        </header>
 
-        <h2>Foto Mahasiswa</h2>
-        <img src="foto%20tiara.jpg" width="250" alt="Foto Mahasiswa">
-        <p><em>Foto mahasiswa pembuat web</em></p>
+        <section class="identity">
+            <h2>👤 Identitas Pembuat</h2>
+            <p><strong>NIM:</strong> 607012530004</p>
+            <p><strong>Nama:</strong> Tiaramailaniruswandi</p>
+            <p><strong>Kelas:</strong> D3 Sistem Informasi [49-01]</p>
+        </section>
 
-        <h2>Mata Kuliah: Jaringan Komputer</h2>
-        <p>Tugas Besar (Tubes) - Hosting Website & Pembahasan Perangkat Jaringan</p>
+        <section class="photo-section">
+            <h2>📸 Foto Mahasiswa</h2>
+            <img src="foto-tiara.jpg" alt="Foto Mahasiswa">
+            <p><em>Foto mahasiswa pembuat website</em></p>
+        </section>
 
-        <h2>Pembahasan Perangkat Jaringan: Router</h2>
-        <img src="router.jpg" width="400" alt="Router Jaringan">
-        <p><strong>Kategori:</strong> Perangkat Perantara</p>
-        <p><strong>Fungsi:</strong> Menghubungkan beberapa jaringan yang berbeda, mengatur lalu lintas data, dan menentukan jalur terbaik untuk pengiriman paket data.</p>
-        <p><strong>Jenis/Macam:</strong></p>
-        <ul>
-            <li>Router Wireless</li>
-            <li>Router Kabel</li>
-            <li>Core Router</li>
-            <li>Edge Router</li>
-        </ul>
-        <p><strong>Sumber Referensi:</strong> <a href="https://id.wikipedia.org/wiki/Router" target="_blank">Wikipedia - Router</a></p>
+        <section>
+            <h2>📖 Mata Kuliah: Jaringan Komputer</h2>
+            <p>Tugas ini dibuat untuk memenuhi syarat Tugas Besar (Tubes) mata kuliah <span class="highlight">Jaringan Komputer</span> dengan tema hosting website dan analisis perangkat jaringan.</p>
+        </section>
 
-        <h2>Download Tutorial PDF</h2>
-        <p>Berikut file tutorial lengkap pembuatan website ini:</p>
-        <ul>
-            <a href="TUTORIAL HOSTING WEBSITE GRATIS MENGGUNAKAN GITHUB PAGES.pdf">Tutorial Hosting Web di GitHub Pages</a>
-             <a href="TUTORIAL ISI WEBSITE HTML.pdf">Tutorial Isi Website HTML</a>
-        </ul>
+        <section class="router-section">
+            <h2>🛜 Pembahasan Perangkat Jaringan: <span class="highlight">Router</span></h2>
+            <img src="router.jpg" alt="Router Jaringan">
+            <p><strong>Kategori:</strong> Perangkat Perantara (Intermediate Device)</p>
+            <p><strong>Fungsi:</strong> Menghubungkan beberapa jaringan yang berbeda, mengatur lalu lintas data antar jaringan, dan menentukan jalur terbaik untuk pengiriman paket data.</p>
+            <p><strong>Jenis/Macam:</strong></p>
+            <ul>
+                <li>Router Wireless</li>
+                <li>Router Kabel (Wired Router)</li>
+                <li>Core Router</li>
+                <li>Edge Router</li>
+            </ul>
+            <p><strong>Sumber Referensi:</strong> <a href="https://id.wikipedia.org/wiki/Router" target="_blank">Wikipedia – Router</a></p>
+        </section>
 
-        <hr>
-        <p><strong>Website ini dibuat untuk memenuhi Tugas Besar Mata Kuliah Jaringan Komputer.</strong></p>
-        <p>Hosting: GitHub Pages | Domain: https://tiaramailaniruswandi.github.io</p>
+        <section class="pdf-links">
+            <h2>📥 Download Tutorial PDF</h2>
+            <p>Berikut file tutorial lengkap pembuatan website ini:</p>
+            <a href="TUTORIAL HOSTING WEBSITE GRATIS MENGGUNAKAN GITHUB PAGES.pdf" download>📘 Tutorial Hosting Web di GitHub Pages</a>
+            <a href="TUTORIAL ISI WEBSITE HTML.pdf" download>📗 Tutorial Isi Website HTML</a>
+        </section>
+
+        <footer>
+            <p><strong>Website ini dibuat untuk memenuhi Tugas Besar Mata Kuliah Jaringan Komputer.</strong></p>
+            <p>Hosting: <span class="highlight">GitHub Pages</span> | Domain: <strong>https://tiaramailaniruswandi.github.io</strong></p>
+            <p style="margin-top:10px;">© 2025 - Tiaramailaniruswandi</p>
+        </footer>
     </div>
 </body>
-
 </html>
-
